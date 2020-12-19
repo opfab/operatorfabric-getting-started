@@ -6,7 +6,7 @@
 	"state": "planned",
 	"groupRecipients": ["Dispatcher"],
 	"severity" : "ALARM",
-	"startDate" : 1553186770681,
+	"startDate" : ${current_date_in_milliseconds_from_epoch},
 	"summary" : {"key" : "maintenanceProcess.summary"},
 	"title" : {"key" : "maintenanceProcess.title"},
 	"data" : {
@@ -18,7 +18,7 @@
 		"comment":"Operation will stop production of the Power Plant"
 		},
 	"timeSpans" : [
-        {"start" : 1606403370910},
-        {"start" :  1606406987125}
+        {"start" : ${current_date_plus_one_day_in_milliseconds_from_epoch}},
+        {"start" : ${current_date_plus_one_day_plus_one_hour_in_milliseconds_from_epoch}}
     	]
 }
