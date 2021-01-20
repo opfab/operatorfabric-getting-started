@@ -1,24 +1,25 @@
 {
-	"id":"criticalSituation",
-	"version":"1",
+	"id": "criticalSituation",
+	"name": "process.name",
+	"version": "1",
 	"states":{
 		"criticalSituation-begin" : {
 			"detailTitle" : { "key" : "criticalSituation-begin.title"},
 			"templateName" : "criticalSituationTemplate",
 			"styles" : [ "style" ],
-			"acknowledgementAllowed": true
+			"acknowledgmentAllowed": "Always"
 		},
 		"criticalSituation-update" : {
 			"detailTitle" : { "key" : "criticalSituation-update.title"},
 			"templateName" : "criticalSituationTemplate",
 			"styles" : [ "style" ],
-			"acknowledgementAllowed": true
+			"acknowledgmentAllowed": "Always"
 		},
 		"criticalSituation-end" : {
 			"detailTitle" : { "key" : "criticalSituation-end.title"},
 			"templateName" : "endCriticalSituationTemplate",
 			"styles" : [ "style" ],
-			"acknowledgementAllowed": true
+			"acknowledgmentAllowed": "Always"
 		}
 	}
 }

@@ -1,4 +1,7 @@
 {
+	"process": {
+		"name": "Default process"
+	},
 	"defaultProcess":{
 		"title":"Message",
 		"summary":"Message received"

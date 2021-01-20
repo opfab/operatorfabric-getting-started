@@ -1,4 +1,7 @@
 {
+	"process": {
+		"name": "Maintenance process"
+	},
 	"maintenanceProcess":{
 		"title":"Maintenance Operation",
 		"summary":"Maitenance operation planified"
