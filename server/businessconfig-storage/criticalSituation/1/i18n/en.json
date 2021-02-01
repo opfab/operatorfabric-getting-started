@@ -1,4 +1,7 @@
 {
+    "process": {
+      "name": "Critical situation process"
+    },
 	"criticalSituation-begin":{
 		"title":"CRITICAL SITUATION",
 		"summary":" CRITICAL SITUATION ON THE GRID , SEE DETAIL FOR INSTRUCTION"

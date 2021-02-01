@@ -1,19 +1,20 @@
 {
 	"id":"defaultProcess",
+	"name": "process.name",
 	"version":"1",
 	"states":{
 		"messageState" : {
 			"detailTitle" : { "key" : "defaultProcess.title"},
 			"templateName" : "template",
 			"styles" : [ "style" ],
-			"acknowledgementAllowed": true
+			"acknowledgmentAllowed": "Always"
 		},
 		"messageState2" : {
 			"detailTitle" : { "key" : "defaultProcess.title"},
 			"templateName" : "template",
 			"styles" : [ "style" ],
-			"acknowledgementAllowed": true
-			
+			"acknowledgmentAllowed": "Always"
+
 		}
 	}
 }

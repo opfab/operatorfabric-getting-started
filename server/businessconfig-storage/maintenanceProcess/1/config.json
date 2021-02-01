@@ -1,12 +1,13 @@
 {
 	"id":"maintenanceProcess",
+	"name": "process.name",
 	"version":"1",
 	"states":{
 		"planned" : {
 			"detailTitle" : { "key" : "maintenanceProcess.title"},
 			"templateName" : "template",
 			"styles" : [ "style" ],
-			"acknowledgementAllowed": true
+			"acknowledgmentAllowed": "Always"
 		}
 	}
 }
