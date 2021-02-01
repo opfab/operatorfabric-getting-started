@@ -6,7 +6,7 @@
 	"groupRecipients": ["Dispatcher"],
 	"state" : "criticalSituation-update",
 	"severity" : "ALARM",
-	"startDate" : 1553186770681,
+	"startDate" : ${current_date_in_milliseconds_from_epoch},
 	"summary" : {
 		"key" : "criticalSituation-update.summary"
 	},

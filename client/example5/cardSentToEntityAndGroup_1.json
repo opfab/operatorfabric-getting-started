@@ -7,7 +7,7 @@
 	"state": "messageState2",
 	"groupRecipients": ["Dispatcher"],
 	"severity" : "INFORMATION",
-	"startDate" : 1553186770681,
+	"startDate" : ${current_date_in_milliseconds_from_epoch},
 	"summary" : {"key" : "defaultProcess.summary"},
 	"title" : {"key" : "defaultProcess.title"},
 	"data" : {"message" : "Hello World !!! Here is a message for ENTITY1 and group Dispatcher - process/state not in operator1 perimeter "}

@@ -6,7 +6,7 @@
 	"state": "criticalSituation-begin",
 	"groupRecipients": ["Dispatcher"],
 	"severity" : "ALARM",
-	"startDate" : 1553186770681,
+	"startDate" : ${current_date_in_milliseconds_from_epoch},
 	"summary" : {"key" : "criticalSituation-begin.summary"},
 	"title" : {"key" : "criticalSituation-begin.title"},
 	"data" : {"instruction":"Critical situation on the grid : stop immediately all maintenance on the grid"}

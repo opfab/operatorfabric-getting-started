@@ -7,7 +7,7 @@
 	"groupRecipients": ["Dispatcher"],
 	"state" : "criticalSituation-end",
 	"severity" : "COMPLIANT",
-	"startDate" : 1553186770681,
+	"startDate" : ${current_date_in_milliseconds_from_epoch},
 	"summary" : {
 		"key" : "criticalSituation-end.summary"
 	},

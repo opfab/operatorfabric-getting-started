@@ -6,7 +6,7 @@
 	"state": "messageState",
 	"groupRecipients": ["Dispatcher"],
 	"severity" : "ALARM",
-	"startDate" : 1553186770681,
+	"startDate" : ${current_date_in_milliseconds_from_epoch},
 	"summary" : {"key" : "defaultProcess.summary"},
 	"title" : {"key" : "defaultProcess.title"},
 	"data" : {"message":":That's my second message"}
