@@ -17,8 +17,8 @@
 		"operationEndTime":"Thu 13 dec 2019 8am", 
 		"comment":"Operation will stop production of the Power Plant"
 		},
-	"timeSpans" : [
-        {"start" : ${current_date_plus_one_day_in_milliseconds_from_epoch}},
-        {"start" : ${current_date_plus_one_day_plus_one_hour_in_milliseconds_from_epoch}}
+		"timeSpans" : [
+			{"start" : ${current_date_plus_two_hours_in_milliseconds_from_epoch}},
+			{"start" : ${current_date_plus_six_hours_in_milliseconds_from_epoch}}
     	]
 }

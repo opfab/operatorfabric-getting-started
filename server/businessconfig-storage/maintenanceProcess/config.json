@@ -4,7 +4,6 @@
 	"version":"1",
 	"states":{
 		"planned" : {
-			"detailTitle" : { "key" : "maintenanceProcess.title"},
 			"templateName" : "template",
 			"styles" : [ "style" ],
 			"acknowledgmentAllowed": "Always"
