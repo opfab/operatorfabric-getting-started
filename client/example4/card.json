@@ -18,7 +18,7 @@
 		"comment":"Operation has no impact on service"
 		},
 	"timeSpans" : [
-        {"start" : ${current_date_plus_one_day_in_milliseconds_from_epoch}},
-        {"start" : ${current_date_plus_one_day_plus_one_hour_in_milliseconds_from_epoch}}
+        {"start" : ${current_date_plus_two_hours_in_milliseconds_from_epoch}},
+        {"start" : ${current_date_plus_six_hours_in_milliseconds_from_epoch}}
     	]
 }

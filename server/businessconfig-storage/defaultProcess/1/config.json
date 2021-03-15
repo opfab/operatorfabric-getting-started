@@ -4,13 +4,11 @@
 	"version":"1",
 	"states":{
 		"messageState" : {
-			"detailTitle" : { "key" : "defaultProcess.title"},
 			"templateName" : "template",
 			"styles" : [ "style" ],
 			"acknowledgmentAllowed": "Always"
 		},
 		"messageState2" : {
-			"detailTitle" : { "key" : "defaultProcess.title"},
 			"templateName" : "template",
 			"styles" : [ "style" ],
 			"acknowledgmentAllowed": "Always"
