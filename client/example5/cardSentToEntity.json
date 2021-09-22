@@ -4,7 +4,7 @@
 	"entityRecipients" : ["ENTITY1"],
 	"process"  :"defaultProcess",
 	"processInstanceId" : "cardExample5",
-	"state": "messageState",
+	"state": "messageState1",
 	"severity" : "INFORMATION",
 	"startDate" : ${current_date_in_milliseconds_from_epoch},
 	"summary" : {"key" : "defaultProcess.summary"},

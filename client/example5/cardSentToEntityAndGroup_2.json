@@ -5,10 +5,10 @@
 	"process"  :"defaultProcess",
 	"processInstanceId" : "cardExample5_2",
 	"state": "messageState",
-	"groupRecipients": ["Planner"],
+	"groupRecipients": ["Dispatcher"],
 	"severity" : "INFORMATION",
 	"startDate" : ${current_date_in_milliseconds_from_epoch},
 	"summary" : {"key" : "defaultProcess.summary"},
 	"title" : {"key" : "defaultProcess.title"},
-	"data" : {"message" : "Hello World !!! Here is a message for ENTITY1 and group Planner - process/state in operator1 perimeter "}
+	"data" : {"message" : "Hello World !!! Here is a message for ENTITY1 and group Dispatcher - process/state in operator1 perimeter "}
 }

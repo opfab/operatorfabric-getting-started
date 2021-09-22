@@ -1,0 +1,18 @@
+{
+	"id" : "example3-Perimeter",
+	"process" : "criticalSituation",
+	"stateRights" : [
+		{
+			"state" : "criticalSituation-begin",
+			"right" : "Receive"
+		},
+		{
+			"state" : "criticalSituation-update",
+			"right" : "Receive"
+		},
+		{
+			"state" : "criticalSituation-end",
+			"right" : "Receive"
+		}
+	]
+}

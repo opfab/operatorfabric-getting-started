@@ -8,6 +8,11 @@
 			"styles" : [ "style" ],
 			"acknowledgmentAllowed": "Always"
 		},
+		"messageState1" : {
+			"templateName" : "template",
+			"styles" : [ "style" ],
+			"acknowledgmentAllowed": "Always"
+		},
 		"messageState2" : {
 			"templateName" : "template",
 			"styles" : [ "style" ],

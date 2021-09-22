@@ -1,9 +1,9 @@
 {
-	"id" : "getting-startedPerimeter",
+	"id" : "example1-Perimeter",
 	"process" : "defaultProcess",
 	"stateRights" : [
 		{
-			"state" : "messageState1",
+			"state" : "messageState",
 			"right" : "Receive"
 		}
 	]
