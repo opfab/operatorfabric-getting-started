@@ -1,0 +1,10 @@
+{
+	"id" : "example4-Perimeter",
+	"process" : "maintenanceProcess",
+	"stateRights" : [
+		{
+			"state" : "planned",
+			"right" : "Receive"
+		}
+	]
+}
