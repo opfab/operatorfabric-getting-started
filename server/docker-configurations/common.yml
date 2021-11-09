@@ -24,6 +24,8 @@ spring:
 operatorfabric:
   servicesUrls:
     users: "users:8080"
+    businessconfig: "businessconfig:8080"
+
   security:
     oauth2:
       client-id: opfab-client
