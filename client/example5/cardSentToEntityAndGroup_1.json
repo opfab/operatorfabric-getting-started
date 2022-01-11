@@ -1,7 +1,7 @@
 {
 	"publisher" : "message-publisher",
 	"processVersion" : "1",
-	"entityRecipients" : ["ENTITY1"],
+	"entityRecipients" : ["ENTITY1_FR"],
 	"process"  :"defaultProcess",
 	"processInstanceId" : "cardExample5_1",
 	"state": "messageState2",
@@ -10,5 +10,5 @@
 	"startDate" : ${current_date_in_milliseconds_from_epoch},
 	"summary" : {"key" : "defaultProcess.summary"},
 	"title" : {"key" : "defaultProcess.title"},
-	"data" : {"message" : "Hello World !!! Here is a message for ENTITY1 and group Dispatcher - process/state not in operator1 perimeter "}
+	"data" : {"message" : "Hello World !!! Here is a message for ENTITY1_FR and group Dispatcher - process/state not in operator1_fr perimeter "}
 }

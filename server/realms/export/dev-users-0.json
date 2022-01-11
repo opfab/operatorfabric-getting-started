@@ -34,7 +34,7 @@
   }, {
     "id" : "5e5a469f-8d21-4308-8229-3532fe6e52f6",
     "createdTimestamp" : 1557499482370,
-    "username" : "operator3",
+    "username" : "operator3_fr",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
@@ -83,14 +83,14 @@
   }, {
     "id" : "793c4666-1162-44a0-b372-42fbaa348e78",
     "createdTimestamp" : 1557499736343,
-    "username" : "operator1",
+    "username" : "operator1_fr",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
     "firstName" : "",
     "lastName" : "",
     "attributes" : {
-      "entitiesId" : [ "ENTITY1;ENTITY3" ],
+      "entitiesId" : [ "ENTITY1_FR;ENTITY3_FR" ],
       "groups" : ["Dispatcher;ReadOnly;Supervisor"]
     },
     "credentials" : [ {
@@ -116,12 +116,12 @@
   }, {
     "id" : "453436ad-ecdc-45c6-a57d-861d565c5eaa",
     "createdTimestamp" : 1557499764075,
-    "username" : "operator2",
+    "username" : "operator2_fr",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
     "attributes" : {
-      "entitiesId" : [ "ENTITY2;ENTITY4" ],
+      "entitiesId" : [ "ENTITY2_FR;IT_SUPERVISOR_ENTITY" ],
       "groups" : ["Planner;ReadOnly;Manager"]
     },
     "credentials" : [ {
@@ -148,12 +148,12 @@
   {
     "id" : "453436ad-ecdc-45c6-a57d-861d565c5eab",
     "createdTimestamp" : 1557499764090,
-    "username" : "operator4",
+    "username" : "itsupervisor1",
     "enabled" : true,
     "totp" : false,
     "emailVerified" : false,
     "attributes" : {
-      "entitiesId" : [ "ENTITY4" ],
+      "entitiesId" : [ "IT_SUPERVISOR_ENTITY" ],
       "groups" : ["Supervisor"]
     },
     "credentials" : [ {
