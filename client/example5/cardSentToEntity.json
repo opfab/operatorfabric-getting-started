@@ -1,7 +1,7 @@
 {
 	"publisher" : "message-publisher",
 	"processVersion" : "1",
-	"entityRecipients" : ["ENTITY1"],
+	"entityRecipients" : ["ENTITY1_FR"],
 	"process"  :"defaultProcess",
 	"processInstanceId" : "cardExample5",
 	"state": "messageState1",
@@ -9,5 +9,5 @@
 	"startDate" : ${current_date_in_milliseconds_from_epoch},
 	"summary" : {"key" : "defaultProcess.summary"},
 	"title" : {"key" : "defaultProcess.title"},
-	"data" : {"message" : "Hello World !!! Here is a message for ENTITY1 "}
+	"data" : {"message" : "Hello World !!! Here is a message for ENTITY1_FR "}
 }
