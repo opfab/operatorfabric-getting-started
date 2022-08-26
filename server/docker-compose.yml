@@ -14,7 +14,7 @@ services:
       - "5672:5672"
       - "15672:15672"
   keycloak:
-    image: jboss/keycloak:12.0.4
+    image: jboss/keycloak:16.1.1
     command: -Dkeycloak.migration.action=import -Dkeycloak.migration.provider=dir -Dkeycloak.migration.dir=/realms/export -Dkeycloak.profile.feature.upload_scripts=enabled
     environment:
     - KEYCLOAK_USER=admin
@@ -27,7 +27,7 @@ services:
     - "90:9990"
   users:
     container_name: users
-    image: "lfeoperatorfabric/of-users-service:3.7.0.RELEASE"
+    image: "lfeoperatorfabric/of-users-service:3.9.1.RELEASE"
     depends_on:
       - mongodb
       - rabbitmq
@@ -45,7 +45,7 @@ services:
       - "./docker-configurations/common.yml:/config/common-docker.yml"
   businessconfig:
     container_name: businessconfig
-    image: "lfeoperatorfabric/of-businessconfig-service:3.7.0.RELEASE"
+    image: "lfeoperatorfabric/of-businessconfig-service:3.9.1.RELEASE"
     depends_on:
       - mongodb
     user: ${USER_ID}:${USER_GID}
@@ -63,7 +63,7 @@ services:
       - "./docker-configurations/businessconfig.yml:/config/application-docker.yml"
   cards-publication:
     container_name: cards-publication
-    image: "lfeoperatorfabric/of-cards-publication-service:3.7.0.RELEASE"
+    image: "lfeoperatorfabric/of-cards-publication-service:3.9.1.RELEASE"
     depends_on:
       - mongodb
       - rabbitmq
@@ -81,7 +81,7 @@ services:
       - "./docker-configurations/cards-publication.yml:/config/application-docker.yml"
   cards-consultation:
     container_name: cards-consultation
-    image: "lfeoperatorfabric/of-cards-consultation-service:3.7.0.RELEASE"
+    image: "lfeoperatorfabric/of-cards-consultation-service:3.9.1.RELEASE"
     depends_on:
       - mongodb
       - rabbitmq
@@ -98,7 +98,7 @@ services:
       - "./docker-configurations/common.yml:/config/common-docker.yml"
       - "./docker-configurations/cards-consultation.yml:/config/application-docker.yml"
   web-ui:
-    image: "lfeoperatorfabric/of-web-ui:3.7.0.RELEASE"
+    image: "lfeoperatorfabric/of-web-ui:3.9.1.RELEASE"
     ports:
     - "2002:80"
     depends_on:
