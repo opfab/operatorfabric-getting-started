@@ -83,44 +83,30 @@
     "provider-url": "http://localhost:89"
   },
   "settings": {
-    "tags": {"hide":true},
-    "about": {
-      "firstapplication": {
-        "name": "First application",
-        "rank": 1,
-        "version": "v12.34.56"
-      },
-      "keycloack": {
-        "name": "Keycloak",
-        "rank": 2,
-        "version": "12.0.2"
-      },
-      "lastapplication": {
-        "name": "Wonderful Solution",
-        "version": "0.1.2-RELEASE"
-      },
-      "operatorfabric": {
-        "name": "OperatorFabric",
-        "rank": 0,
-        "version": "2.5.0"
-      }
-    },
-    "infos": 
-      { 
-        "hide": 
-        {
-        "description": true,
-        "disable": false,
-        "timezone":false,
-        "tags":true,
-        "language":false
-        }
-      },
     "locale": "en",
     "dateTimeFormat": "HH:mm DD/MM/YYYY",
     "dateFormat": "DD/MM/YYYY",
     "nightDayMode": true,
     "styleWhenNightDayModeDesactivated" : "NIGHT"
+  },
+  "settingsScreen": {
+    "hiddenSettings":  ["description"]
+  },
+  "about": {
+    "firstapplication": {
+      "name": "First application",
+      "rank": 1,
+      "version": "v12.34.56"
+    },
+    "keycloack": {
+      "name": "Keycloak",
+      "rank": 2,
+      "version": "12.0.2"
+    },
+    "lastapplication": {
+      "name": "Wonderful Solution",
+      "version": "0.1.2-RELEASE"
+    }
   },
   "navbar": {
     "hidden": ["logging","monitoring","usercard","calendar"],
