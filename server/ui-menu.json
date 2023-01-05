@@ -19,7 +19,7 @@
     },
     {
       "id": "usercard",
-      "visible": false
+      "visible": true
     },
     {
       "id": "calendar",
@@ -27,7 +27,7 @@
     },
     {
       "id": "admin",
-      "visible": false,
+      "visible": true,
       "showOnlyForGroups": ["ADMIN"]
     },
     {

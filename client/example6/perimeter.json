@@ -1,0 +1,10 @@
+{
+	"id" : "example6-Perimeter",
+	"process" : "defaultProcess",
+	"stateRights" : [
+		{
+			"state" : "messageState",
+			"right" : "ReceiveAndWrite"
+		}
+	]
+}
