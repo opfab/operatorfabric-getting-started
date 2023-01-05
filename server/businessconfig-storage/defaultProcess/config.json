@@ -1,18 +1,24 @@
 {
 	"id":"defaultProcess",
 	"name": "process.name",
-	"version":"1",
-	"states":{
-		"messageState" : {
-			"templateName" : "template",
-			"styles" : [ "style" ],
-			"acknowledgmentAllowed": "Always"
-		},
-		"messageState2" : {
-			"templateName" : "template",
-			"styles" : [ "style" ],
-			"acknowledgmentAllowed": "Always"
-
+	"version":"2",
+	"states": {
+		"messageState": {
+		  "name": "Message",
+		  "description": "Message",
+		  "color": "#CC9900",
+		  "userCard" : {
+			"template" : "usercard_message",
+			"endDateVisible" : false,
+			"lttdVisible" : false,
+			"expirationDateVisible" : false
+		  },
+		  "templateName": "message",
+		  "styles": [],
+		  "acknowledgmentAllowed": "Always",
+		  "showAcknowledgmentFooter" : "OnlyForEmittingEntity",
+		  "type" : "INPROGRESS",
+		  "consideredAcknowledgedForUserWhen" : "AllEntitiesOfUserHaveAcknowledged"
 		}
 	}
 }
