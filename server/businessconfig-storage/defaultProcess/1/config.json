@@ -17,7 +17,6 @@
 			"templateName" : "template",
 			"styles" : [ "style" ],
 			"acknowledgmentAllowed": "Always"
-			
 		}
 	}
 }
