@@ -1,3 +1,4 @@
 *.env
 .idea/*
 *.tar.gz
+cypress/node_modules/
