@@ -8,8 +8,7 @@ export class GettingStartedScriptCommands {
         cy.exec('cd ../client/example' + example + ' && ./setupPerimeter.sh perimeter.json');
     }
 
-    //Only for example 5
-    createPerimeterAndAttachToGroup = function () {
+    setupPerimeterForExample5 = function () {
         cy.exec('cd ../client/example5 && source ../getToken.sh && ./createPerimeter.sh perimeter.json && ./putPerimeterForGroup.sh');
     }
 
@@ -33,8 +32,7 @@ export class GettingStartedScriptCommands {
         cy.exec('./scripts/deleteBundleArchive.sh ' + example);
     }
 
-    //Only for example 6
-    packageBundleUpdated = function () {
+    packageUpdatedBundleForExample6 = function () {
         cy.exec('cd ../client/example6 && ./packageBundle_updated.sh');
     }
 }

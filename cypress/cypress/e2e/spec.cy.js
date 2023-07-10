@@ -37,15 +37,11 @@ describe('Getting Started Examples', () => {
   })
 
 
-
   describe('Example 2', () => {
-    it('Send new bundle', () => {
+    it('Send new bundle and new card', () => {
       script.packageBundleForExample('2');
       script.sendBundleForExample('2');
       script.deleteBundleArchiveForExample('2');
-    })
-
-    it('Send card with new process version', () => {
       script.deleteAllCards();
       opfab.loginWithUser('operator1_fr');
       script.sendCardForExample('2', 'card.json');
@@ -106,7 +102,7 @@ describe('Getting Started Examples', () => {
       script.sendCardForExample('5', 'cardSentToEntity.json');
       cy.wait(2000);
       cy.get('of-light-card').should('not.exist');
-      script.createPerimeterAndAttachToGroup();
+      script.setupPerimeterForExample5();
       cy.reload();
       opfab.openFirstCard();
     })
@@ -147,7 +143,7 @@ describe('Getting Started Examples', () => {
 
     it('Send usercard with updated template', () => {
       script.deleteAllCards();
-      script.packageBundleUpdated();
+      script.packageUpdatedBundleForExample6();
       script.sendBundleForExample('6');
       script.deleteBundleArchiveForExample('6');
       opfab.loginWithUser('operator1_fr');
