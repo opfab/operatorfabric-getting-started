@@ -1,0 +1,16 @@
+on:
+  push:
+  pull_request:
+
+jobs:
+  CypressTests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - run: npm install
+
+      - name: Cypress.io
+        uses: cypress-io/github-action@v5.8.2
+        with:
+          command: npm run spec
