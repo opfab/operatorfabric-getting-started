@@ -8,9 +8,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        
+      - name: Start Opfab
+        run: ./server/startServer.sh
 
       - name: Cypress Tests
         uses: cypress-io/github-action@v5.8.2
         with:
           working-directory: cypress
-          #command: npm run spec
