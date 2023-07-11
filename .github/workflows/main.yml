@@ -7,15 +7,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
-      - name: Set up Node.js
-        uses: actions/setup-node@v3.7.0
-      
-      - name: Install Cypress Dependencies
-        run: npm ci --prefix cypress
 
-      - name: Cypress.io
+      - name: Cypress
         uses: cypress-io/github-action@v5.8.2
         with:
-          config-file: cypress/
+          working-directory: cypress
           command: npm run spec
