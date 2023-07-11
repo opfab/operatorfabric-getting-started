@@ -10,7 +10,9 @@ jobs:
         uses: actions/checkout@v3
         
       - name: Start Opfab
-        run: ls
+        run: |
+          cd server
+          ./startServer.sh
 
       - name: Cypress Tests
         uses: cypress-io/github-action@v5.8.2
