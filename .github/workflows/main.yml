@@ -11,7 +11,8 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3.7.0
       
-      - run: npm install
+      - name: Install Cypress Dependencies
+        run: npm ci --prefix cypress
 
       - name: Cypress.io
         uses: cypress-io/github-action@v5.8.2
