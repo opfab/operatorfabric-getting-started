@@ -14,4 +14,4 @@ jobs:
       - name: echo changed files
         run: |
           cd .github/scripts
-          ./echo.sh ${{ steps.changed-files.outputs.all_changed_files }}
+          ./licenceHeaderCheck.sh ${{ steps.changed-files.outputs.all_changed_files }}
