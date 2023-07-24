@@ -23,8 +23,8 @@ for file in "$@"; do
 done
 
 if [ "${#incorrect_files[@]}" -gt 0 ]; then
-    echo "::error::Missing correct Copyright header in :"
-    for file in "${incorrect_files[@]}"; do
+    echo "::error::Missing correct copyright header in :"
+    for file in "   ${incorrect_files[@]}"; do
         echo "$file"
     done
     exit 1
