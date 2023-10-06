@@ -2,10 +2,6 @@
 # !!!! WARNING: VALUES SHOULD BE CHANGED FOR PRODUCTION MODE !!!!
 #
 
-spring:
-  application:
-    name: users
-
 
 operatorfabric.users.default:
   users:

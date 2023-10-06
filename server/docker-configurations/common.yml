@@ -4,32 +4,26 @@ management:
     web:
       exposure:
         include: '*'
-spring:
+
+operatorfabric:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://keycloak:89/auth/realms/dev/protocol/openid-connect/certs
+          login-claim: preferred_username
+          expire-claim: exp
+      client-id: opfab-client
+  servicesUrls:
+    users: "users:2103"
+    businessconfig: "businessconfig:2100"
+  mongodb:
+    uri: mongodb://root:password@mongodb:27017/operator-fabric?authSource=admin
+
   rabbitmq:
     host: rabbitmq
     port: 5672
     username: guest
     password: guest
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: http://keycloak:8080/auth/realms/dev/protocol/openid-connect/certs
-  data:
-    mongodb:
-      database: operator-fabric
-      uri: mongodb://root:password@mongodb:27017/operator-fabric?authSource=admin&authMode=scram-sha1
 
-
-operatorfabric:
-  servicesUrls:
-    users: "users:8080"
-    businessconfig: "businessconfig:8080"
-
-  security:
-    oauth2:
-      client-id: opfab-client
-    jwt:
-      login-claim: preferred_username
-      expire-claim: exp
 
