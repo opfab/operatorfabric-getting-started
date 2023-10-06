@@ -1,91 +1,82 @@
 {
-  "coreMenusConfiguration":
-  [
+  "navigationBar": [
     {
-      "id": "feed",
-      "visible": true
+      "opfabCoreMenuId": "feed"
     },
     {
-      "id": "archives",
-      "visible": true
+      "opfabCoreMenuId": "archives"
     },
-    {
-      "id": "monitoring",
-      "visible": false
-    },
-    {
-      "id": "logging",
-      "visible": false
-    },
-    {
-      "id": "usercard",
-      "visible": true
-    },
-    {
-      "id": "calendar",
-      "visible": false
-    },
-    {
-      "id": "admin",
-      "visible": true,
-      "showOnlyForGroups": ["ADMIN"]
-    },
-    {
-      "id": "settings",
-      "visible": true
-    },
-    {
-      "id": "feedconfiguration",
-      "visible": false
-    },
-    {
-      "id": "realtimeusers",
-      "visible": false,
-      "showOnlyForGroups": ["ADMIN"]
-    },
-    {
-      "id": "nightdaymode",
-      "visible": false
-    },
-    {
-      "id": "about",
-      "visible": true
-    },
-    {
-      "id": "logout",
-      "visible": true
-    }
-  ],
-  "menus": [
     {
       "id": "menu1",
-      "label": "title.single",
+      "label": "menu1.title.single",
       "entries": [
         {
-          "id": "uid_test_0",
+          "customMenuId": "uid_test_0",
           "url": "https://en.wikipedia.org/w/index.php",
-          "label": "entry.single",
+          "label": "menu1.entry.single",
           "linkType": "BOTH"
         }
       ]
     },
     {
       "id": "menu2",
-      "label": "title.multi",
+      "label": "menu2.title.multi",
       "entries": [
         {
-          "id": "uid_test_1",
+          "customMenuId": "uid_test_1",
           "url": "https://opfab.github.io/",
-          "label": "entry.entry1",
+          "label": "menu2.entry.entry1",
           "linkType": "BOTH"
         },
         {
-          "id": "uid_test_2",
+          "customMenuId": "uid_test_2",
           "url": "https://www.wikipedia.org/",
-          "label": "entry.entry2",
+          "label": "menu2.entry.entry2",
           "linkType": "BOTH"
         }
       ]
+    }
+  ],
+  "topRightIconMenus": [
+    {
+      "opfabCoreMenuId": "usercard",
+      "visible": true
+    },
+    {
+      "opfabCoreMenuId": "calendar",
+      "visible": false
+    }
+  ],
+  "topRightMenus": [
+    {
+      "opfabCoreMenuId": "admin",
+      "visible": true,
+      "showOnlyForGroups": ["ADMIN"]
+    },
+    {
+      "opfabCoreMenuId": "settings",
+      "visible": true
+    },
+    {
+      "opfabCoreMenuId": "feedconfiguration",
+      "visible": false
+    },
+    {
+      "opfabCoreMenuId": "realtimeusers",
+      "visible": false,
+      "showOnlyForGroups": ["ADMIN"]
+    },
+    {
+      "opfabCoreMenuId": "nightdaymode",
+      "visible": false
+    },
+    {
+      "opfabCoreMenuId": "about",
+      "visible": true
+    },
+    {
+      "opfabCoreMenuId": "logout",
+      "visible": true
     }
   ],
   "locales": [

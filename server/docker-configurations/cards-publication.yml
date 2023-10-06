@@ -1,7 +1,5 @@
 
 spring:
-  application:
-    name: cards-publication
   deserializer:
     value:
       delegate:
@@ -17,21 +15,11 @@ spring:
 #    consumer:
 #      group-id: opfab-command
 
-opfab:
-  kafka:
-    topics:
-      card:
-        topicname: opfab
-      response-card:
-        topicname: opfab-response
-    schema:
-      registry:
-        url: http://localhost:8081
 
 #here we put urls for all feign clients
 users:
   ribbon:
-    listOfServers: users:8080
+    listOfServers: users:2103
 
 externalRecipients-url: "{\
           externalRecipient: \"http://ext-app:8090/test\" \
@@ -39,5 +27,16 @@ externalRecipients-url: "{\
 
 # WARNING : If you set this parameter to false , all users have the rights to respond to all cards
 checkPerimeterForResponseCard: true
-checkAuthenticationForCardSending: false
-checkPerimeterForCardSending: false
+operatorfabric:
+  cards-publication:
+    checkAuthenticationForCardSending: false
+    checkPerimeterForCardSending: false
+    kafka:
+      topics:
+        card:
+          topicname: opfab
+        response-card:
+          topicname: opfab-response
+      schema:
+        registry:
+          url: http://localhost:8081

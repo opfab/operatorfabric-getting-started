@@ -1,8 +1,4 @@
 
-spring:
-  application:
-    name: businessconfig
-
 
 operatorfabric.businessconfig:
   storage:
@@ -11,4 +7,4 @@ operatorfabric.businessconfig:
 #here we put urls for all feign clients
 users:
   ribbon:
-    listOfServers: users:8080
+    listOfServers: users:2103
