@@ -1,0 +1,17 @@
+{
+	"process": {
+		"name": "Default process"
+	},
+	"defaultProcess":{
+		"title":"Message",
+		"summary":"Message received"
+	},
+	"message": {
+		"title":"Message",
+		"summary":"Message received"
+	},
+	"question": {
+		"title":"Question",
+		"summary":"Question received"
+	}
+}
