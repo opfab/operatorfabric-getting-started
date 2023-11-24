@@ -156,4 +156,65 @@ describe('Getting Started Examples', () => {
       opfab.openFirstCard();
     })
   })
+
+  describe('Example 7', () => {
+    it('Message card using "build-in" templates', () => {
+      script.packageBundleForExample('7');
+      script.sendBundleForExample('7');
+      script.deleteAllCards();
+
+      opfab.loginWithUser('operator1_fr');
+
+      cy.reload();
+      opfab.openUserCardMenu();
+      cy.get('.opfab-textarea').type('test message with build-in template');
+      opfab.selectRecipient('ENTITY1_FR');
+      cy.get('#opfab-usercard-btn-prepareCard').click();
+      cy.get('#opfab-usercard-btn-accept').click();
+      opfab.openFirstCard();
+
+      opfab.checkOpenedCardBuildInTemplateMessage('You received a message :');
+      opfab.checkOpenedCardBuildInTemplateMessage('test message with build-in template');
+
+      script.packageUpdatedBundleForExample7();
+      script.sendBundleForExample('7');
+      cy.reload();
+      opfab.checkOpenedCardBuildInTemplateMessage('a new header');
+      opfab.checkOpenedCardBuildInTemplateMessage('test message with build-in template');
+    })
+  })
+
+  describe('Example 8', () => {
+    it('Question card using "build-in" templates', () => {
+      script.packageBundleForExample('8');
+      script.sendBundleForExample('8');
+      script.setupPerimeterForExample('8');
+      script.deleteAllCards();
+
+      opfab.loginWithUser('operator1_fr');
+
+      cy.reload();
+      opfab.openUserCardMenu();
+      opfab.selectState('Question');
+      cy.get('.opfab-textarea').type('Is the situation back to normal ?');
+      opfab.selectRecipient('ENTITY1_FR');
+      cy.get('#opfab-usercard-btn-prepareCard').click();
+      cy.get('#opfab-usercard-btn-accept').click();
+      opfab.openFirstCard();
+
+      opfab.checkOpenedCardBuildInTemplateQuestion('Is the situation back to normal ?');
+
+      cy.wait(3000);
+      opfab.logout();
+      opfab.loginWithUser('operator3_fr', false);
+      opfab.openFirstCard();
+      opfab.answerToBuildInTemplateQuestion('yes everything is ok now');
+      cy.wait(3000);
+      opfab.logout();
+
+      opfab.loginWithUser('operator1_fr', false);
+      opfab.openFirstCard();
+      opfab.checkAnswerInBuildInTemplateQuestion('yes everything is ok now');
+    })
+  })
 })

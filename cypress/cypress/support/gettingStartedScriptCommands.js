@@ -35,4 +35,8 @@ export class GettingStartedScriptCommands {
     packageUpdatedBundleForExample6 = function () {
         cy.exec('cd ../client/example6 && ./packageBundle_updated.sh');
     }
+
+    packageUpdatedBundleForExample7 = function () {
+        cy.exec('cd ../client/example7 && ./packageBundle_updated.sh');
+    }
 }
