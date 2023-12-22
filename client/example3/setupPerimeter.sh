@@ -1,4 +1,4 @@
-# Get the acces tocken
+# Get the access token
 source ../getToken.sh admin
 
 # Create perimeter

@@ -1,0 +1,19 @@
+{
+	"id":"defaultProcess",
+	"name": "Message process",
+	"version":"2",
+	"states": {
+		"messageState": {
+		  "name": "Message",
+		  "description": "Message",
+		  "userCard" : {
+			"template" : "usercard_message",
+			"startDateVisible": false,
+			"endDateVisible" : false,
+			"lttdVisible" : false,
+			"expirationDateVisible" : false
+		  },
+		  "templateName": "message"
+		}
+	}
+}

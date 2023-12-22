@@ -1,0 +1,35 @@
+{
+  "id":"defaultProcess",
+  "name": "Message process",
+  "version":"2",
+  "states": {
+    "messageState": {
+      "name": "Message",
+      "description": "Message",
+      "userCard" : {
+        "template" : "usercard_message",
+        "startDateVisible": false,
+        "endDateVisible" : false,
+        "lttdVisible" : false,
+        "expirationDateVisible" : false
+      },
+      "templateName": "message"
+    },
+	"questionState": {
+      "name": "Question",
+      "description": "Question",
+      "userCard" : {
+        "template" : "usercard_question",
+        "startDateVisible": false,
+        "endDateVisible" : false,
+        "lttdVisible" : false,
+        "expirationDateVisible" : false
+      },
+      "response": {
+        "state": "questionState",
+        "emittingEntityAllowedToRespond": "true"
+      },
+      "templateName": "question"
+    }
+  }
+}
