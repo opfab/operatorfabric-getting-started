@@ -1,6 +1,1 @@
-
-
-#here we put urls for all feign clients
-users:
-  ribbon:
-    listOfServers: users:2103
+# logging.level.ROOT: trace

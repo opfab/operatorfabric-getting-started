@@ -11,9 +11,8 @@ operatorfabric:
       resourceserver:
         jwt:
           jwk-set-uri: http://keycloak:89/auth/realms/dev/protocol/openid-connect/certs
-          login-claim: preferred_username
-          expire-claim: exp
-      client-id: opfab-client
+    jwt:
+      login-claim: preferred_username
   servicesUrls:
     users: "users:2103"
     businessconfig: "businessconfig:2100"
