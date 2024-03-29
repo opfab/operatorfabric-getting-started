@@ -1,10 +1,4 @@
 
-management:
-  endpoints:
-    web:
-      exposure:
-        include: '*'
-
 operatorfabric:
   security:
     oauth2:
@@ -13,9 +7,7 @@ operatorfabric:
           jwk-set-uri: http://keycloak:89/auth/realms/dev/protocol/openid-connect/certs
     jwt:
       login-claim: preferred_username
-  servicesUrls:
-    users: "users:2103"
-    businessconfig: "businessconfig:2100"
+
   mongodb:
     uri: mongodb://root:password@mongodb:27017/operator-fabric?authSource=admin
 
