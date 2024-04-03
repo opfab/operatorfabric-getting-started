@@ -9,25 +9,30 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: password
   rabbitmq:
     container_name: rabbitmq
-    image: lfeoperatorfabric/of-rabbitmq:4.1.0.RELEASE
+    image: lfeoperatorfabric/of-rabbitmq:4.2.0.RELEASE
     ports:
       - "5672:5672"
       - "15672:15672"
   keycloak:
-    image: jboss/keycloak:16.1.1
-    command: -Dkeycloak.migration.action=import -Dkeycloak.migration.provider=dir -Dkeycloak.migration.dir=/realms/export -Dkeycloak.profile.feature.upload_scripts=enabled -Djboss.http.port=89
+    image: keycloak/keycloak:23.0.7
+    command:
+      - -v
+      - start-dev 
+      - --import-realm
     environment:
-    - KEYCLOAK_USER=admin
-    - KEYCLOAK_PASSWORD=admin
-    - DB_VENDOR=H2
+      - KC_HTTP_PORT=89
+      - KC_HEALTH_ENABLED=true
+      - KC_METRICS_ENABLED=true
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+      - KC_HTTP_RELATIVE_PATH=/auth
     volumes:
-    - ./realms:/realms
+    - ./realms/export:/opt/keycloak/data/import
     ports:
     - "89:89"
-    - "90:9990"
   users:
     container_name: users
-    image: "lfeoperatorfabric/of-users-service:4.1.0.RELEASE"
+    image: "lfeoperatorfabric/of-users-service:4.2.0.RELEASE"
     depends_on:
       - mongodb
       - rabbitmq
@@ -45,7 +50,7 @@ services:
       - "./docker-configurations/common.yml:/config/common.yml"
   businessconfig:
     container_name: businessconfig
-    image: "lfeoperatorfabric/of-businessconfig-service:4.1.0.RELEASE"
+    image: "lfeoperatorfabric/of-businessconfig-service:4.2.0.RELEASE"
     depends_on:
       - mongodb
     user: ${USER_ID}:${USER_GID}
@@ -63,7 +68,7 @@ services:
       - "./docker-configurations/businessconfig.yml:/config/application.yml"
   cards-publication:
     container_name: cards-publication
-    image: "lfeoperatorfabric/of-cards-publication-service:4.1.0.RELEASE"
+    image: "lfeoperatorfabric/of-cards-publication-service:4.2.0.RELEASE"
     depends_on:
       - mongodb
       - rabbitmq
@@ -81,7 +86,7 @@ services:
       - "./docker-configurations/cards-publication.yml:/config/application.yml"
   cards-consultation:
     container_name: cards-consultation
-    image: "lfeoperatorfabric/of-cards-consultation-service:4.1.0.RELEASE"
+    image: "lfeoperatorfabric/of-cards-consultation-service:4.2.0.RELEASE"
     depends_on:
       - mongodb
       - rabbitmq
@@ -98,7 +103,7 @@ services:
       - "./docker-configurations/common.yml:/config/common.yml"
       - "./docker-configurations/cards-consultation.yml:/config/application.yml"
   web-ui:
-    image: "lfeoperatorfabric/of-web-ui:4.1.0.RELEASE"
+    image: "lfeoperatorfabric/of-web-ui:4.2.0.RELEASE"
     ports:
     - "2002:80"
     depends_on:
