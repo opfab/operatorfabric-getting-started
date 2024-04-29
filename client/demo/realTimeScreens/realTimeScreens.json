@@ -1,0 +1,36 @@
+{
+    "realTimeScreens": [
+      {
+        "screenName": "All Control Centers",
+        "screenColumns": [
+          {
+            "entitiesGroups": ["ENTITY_FR","ENTITY_IT","ENTITY_NL"]
+          }
+        ]
+      },
+      {
+        "screenName": "French Control Centers",
+        "screenColumns": [
+          {
+            "entitiesGroups": ["ENTITY_FR"]
+          }
+        ]
+      },
+      {
+        "screenName": "Italian Control Centers",
+        "screenColumns": [
+          {
+            "entitiesGroups": ["ENTITY_IT"]
+          }
+        ]
+      },
+      {
+        "screenName": "Dutch Control Centers",
+        "screenColumns": [
+          {
+            "entitiesGroups": ["ENTITY_NL"]
+          }
+        ]
+      }
+    ]
+  }

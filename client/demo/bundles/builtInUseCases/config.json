@@ -1,0 +1,83 @@
+{
+    "id": "demoProcess",
+    "name": "builtInUseCases",
+    "version": "1",
+    "uiVisibility": {
+        "monitoring": true,
+        "processMonitoring": true,
+        "logging": true,
+        "calendar": true
+    },
+    "states": {
+        "messageState": {
+            "name": "Message",
+            "description": "Message",
+            "color": "#CC9900",
+            "userCard": {
+                "template": "usercard_message",
+                "startDateVisible": false,
+                "endDateVisible": false,
+                "recipientForInformationVisible": true
+            },
+            "templateName": "message",
+            "styles": [],
+            "acknowledgmentAllowed": "Always",
+            "showAcknowledgmentFooter": "OnlyForEmittingEntity",
+            "type": "INPROGRESS",
+            "consideredAcknowledgedForUserWhen": "AllEntitiesOfUserHaveAcknowledged"
+        },
+        "messageOrQuestionListState": {
+            "name": "Message or question list",
+            "description": "Message or question list",
+            "userCard": {
+                "template": "usercard_message_or_question_list",
+                "startDateVisible": false,
+                "endDateVisible": false,
+                "recipientForInformationVisible" : true,
+                "severityVisible": false
+            },
+            "response": {
+                "state": "messageOrQuestionListState",
+                "emittingEntityAllowedToRespond": "false"
+            },
+            "templateName": "message_or_question_list",
+            "styles": [],
+            "type": "INPROGRESS"
+        },
+        "taskState": {
+            "name": "Task",
+            "description": "Task",
+            "color": "#0070C0",
+            "userCard" : {
+              "template" : "usercard_task",
+              "recipientVisible" : true
+            },
+            "templateName": "task",
+            "styles": [
+            ],
+            "acknowledgmentAllowed": "Always",
+            "consideredAcknowledgedForUserWhen" : "AllEntitiesOfUserHaveAcknowledged",
+            "type" : "INPROGRESS"
+        },
+        "questionState": {
+            "name": "Question",
+            "description": "Question",
+            "color": "#0070C0",
+            "userCard": {
+                "template": "usercard_question",
+                "severityVisible": false,
+                "startDateVisible": true,
+                "endDateVisible": true,
+                "lttdVisible": true
+            },
+            "response": {
+                "state": "questionState",
+                "emittingEntityAllowedToRespond": "true"
+            },
+            "templateName": "question",
+            "styles": [],
+            "acknowledgmentAllowed": "Never",
+            "type": "INPROGRESS"
+        }
+    }
+}
