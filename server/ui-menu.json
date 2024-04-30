@@ -63,8 +63,7 @@
     },
     {
       "opfabCoreMenuId": "realtimeusers",
-      "visible": false,
-      "showOnlyForGroups": ["ADMIN"]
+      "visible": true
     },
     {
       "opfabCoreMenuId": "nightdaymode",

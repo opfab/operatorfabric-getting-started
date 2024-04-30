@@ -6,36 +6,36 @@
 operatorfabric.users.default:
   users:
     - login: admin
-      groups: ["ADMIN"]
+      groups: ["ADMIN", "Demo"]
       entities: ["ENTITY1_FR","ENTITY2_FR"]
     - login: operator3_fr
-      groups: ["RTE","ADMIN","ReadOnly","Dispatcher", "REALTIME_USERS"]
+      groups: ["RTE","ADMIN","ReadOnly","Dispatcher", "REALTIME_USERS", "Demo"]
       entities: ["ENTITY1_FR"]
     - login: operator1_fr
       firstname : John
       lastname : Doe
-      groups: ["Dispatcher","ReadOnly", "REALTIME_USERS"]
+      groups: ["Dispatcher","ReadOnly", "REALTIME_USERS", "Demo"]
       entities: ["ENTITY1_FR"]
     - login: operator2_fr
-      groups: ["Planner", "ReadOnly", "REALTIME_USERS"]
+      groups: ["Planner", "ReadOnly", "REALTIME_USERS", "Demo"]
       entities: ["ENTITY2_FR"]
     - login: itsupervisor1
-      groups: ["Supervisor", "REALTIME_USERS"]
+      groups: ["Supervisor", "REALTIME_USERS", "Demo"]
       entities: ["IT_SUPERVISOR_ENTITY"]
     - login: operator1_it
-      groups: ["Dispatcher", "ReadOnly",]
+      groups: ["Dispatcher", "ReadOnly", "Demo"]
       entities: ["ENTITY1_IT"]
     - login: operator2_it
-      groups: ["Planner", "ReadOnly"]
+      groups: ["Planner", "ReadOnly", "Demo"]
       entities: ["ENTITY2_IT"]
     - login: operator3_it
-      groups: ["Dispatcher", "Planner", "ReadOnly"]
+      groups: ["Dispatcher", "Planner", "ReadOnly", "Demo"]
       entities: ["ENTITY3_IT"]
     - login: operator1_nl
-      groups: ["Dispatcher", "Planner", "ReadOnly"]
+      groups: ["Dispatcher", "Planner", "ReadOnly", "Demo"]
       entities: ["ENTITY1_NL"]
     - login: operator2_nl
-      groups: ["Dispatcher", "Planner", "ReadOnly"]
+      groups: ["Dispatcher", "Planner", "ReadOnly", "Demo"]
       entities: ["ENTITY2_NL"]
   groups:
     - id: ADMIN
@@ -59,6 +59,9 @@ operatorfabric.users.default:
     - id: ReadOnly
       name: ReadOnly
       description: ReadOnly Group
+    - id: Demo
+      name: Demo
+      description: Demo Group
   entities:
    - id: ENTITY1_FR
      name: Control Center FR North

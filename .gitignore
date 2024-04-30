@@ -2,3 +2,7 @@
 .idea/*
 *.tar.gz
 cypress/node_modules/
+
+server/businessconfig-storage/businessdata
+server/businessconfig-storage/bundles/demoProcess
+server/businessconfig-storage/realtimescreens.json

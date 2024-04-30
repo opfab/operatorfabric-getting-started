@@ -1,0 +1,22 @@
+{
+	"id" : "demoProcess",
+	"process" : "demoProcess",
+	"stateRights" : [
+	  {
+		"state" : "messageState",
+		"right" : "ReceiveAndWrite"
+	  },
+	  {
+		"state" : "questionState",
+		"right" : "ReceiveAndWrite"
+	  },
+	  {
+		"state" : "messageOrQuestionListState",
+		"right" : "ReceiveAndWrite"
+	  },
+	  {
+		"state" : "taskState",
+		"right" : "ReceiveAndWrite"
+	  }
+	]
+  }
