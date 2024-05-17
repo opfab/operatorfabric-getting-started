@@ -58,8 +58,12 @@
       "visible": true
     },
     {
+      "opfabCoreMenuId": "activityarea",
+      "visible": true
+    },
+    {
       "opfabCoreMenuId": "feedconfiguration",
-      "visible": false
+      "visible": true
     },
     {
       "opfabCoreMenuId": "realtimeusers",
@@ -67,7 +71,7 @@
     },
     {
       "opfabCoreMenuId": "nightdaymode",
-      "visible": false
+      "visible": true
     },
     {
       "opfabCoreMenuId": "about",
