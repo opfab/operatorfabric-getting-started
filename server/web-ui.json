@@ -1,5 +1,6 @@
 {
   "checkPerimeterForResponseCard": true,
+  "showUserEntitiesOnTopRightOfTheScreen": true,
   "archive": {
     "filters": {
       "page": {
