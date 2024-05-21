@@ -8,30 +8,11 @@
     },
     {
       "id": "menu1",
-      "label": "menu1.title.single",
       "entries": [
         {
           "customMenuId": "uid_test_0",
-          "url": "https://en.wikipedia.org/w/index.php",
-          "label": "menu1.entry.single",
-          "linkType": "BOTH"
-        }
-      ]
-    },
-    {
-      "id": "menu2",
-      "label": "menu2.title.multi",
-      "entries": [
-        {
-          "customMenuId": "uid_test_1",
           "url": "https://opfab.github.io/",
-          "label": "menu2.entry.entry1",
-          "linkType": "BOTH"
-        },
-        {
-          "customMenuId": "uid_test_2",
-          "url": "https://www.wikipedia.org/",
-          "label": "menu2.entry.entry2",
+          "label": "menu1.entry.single",
           "linkType": "BOTH"
         }
       ]
@@ -83,20 +64,8 @@
       "language": "en",
       "i18n": {
         "menu1": {
-          "title": {
-            "single": "First menu"
-          },
           "entry": {
-            "single": "Single menu entry"
-          }
-        },
-        "menu2": {
-          "title": {
-            "multi": "Second menu"
-          },
-          "entry": {
-            "entry1": "First menu entry",
-            "entry2": "Second menu entry"
+            "single": "Documentation"
           }
         }
       }
@@ -105,20 +74,8 @@
       "language": "fr",
       "i18n": {
         "menu1": {
-          "title": {
-            "single": "Premier menu"
-          },
           "entry": {
-            "single": "Unique élément"
-          }
-        },
-        "menu2": {
-          "title": {
-            "multi": "Deuxième menu"
-          },
-          "entry": {
-            "entry1": "Premier élément",
-            "entry2": "Deuxième élément"
+            "single": "Documentation"
           }
         }
       }
