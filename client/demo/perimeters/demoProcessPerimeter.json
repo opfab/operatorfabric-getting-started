@@ -1,6 +1,6 @@
 {
-	"id" : "demoProcess",
-	"process" : "demoProcess",
+	"id" : "demoProcessPerimeter",
+	"process" : "demoProcessId",
 	"stateRights" : [
 	  {
 		"state" : "messageState",

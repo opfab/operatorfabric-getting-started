@@ -22,7 +22,7 @@ waitService() {
         sleep 5;
     done
 }
-echo "Wait for opfab to start"
+echo "Waiting for opfab to start"
 waitService businessconfig localhost:2100
 waitService cards-publication localhost:2102/cards/userCard
 waitService users localhost:2103

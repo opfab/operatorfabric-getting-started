@@ -130,6 +130,31 @@
     "notBefore" : 0,
     "groups" : [ ]
   }, {
+    "id" : "2951ebcb-f804-48b1-9659-cfbdf87301b5",
+    "createdTimestamp" : 1697538125718,
+    "username" : "publisher_test",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "",
+    "lastName" : "",
+    "attributes" : {
+      "groups" : [ "Planner;ReadOnly;Manager;Demo" ]
+    },
+    "credentials" : [ {
+      "id" : "56211d65-789b-4f75-aa78-44d250436977",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1697538135699,
+      "secretData" : "{\"value\":\"n9CDOwKI1B/zyrRAJbDShHdh6Iqk0AFg2pML7nwzdHk=\",\"salt\":\"s0mmPxfQh8PICyE6g17q+A==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-dev" ],
+    "notBefore" : 0,
+    "groups" : [ ]
+  }, {
     "id" : "f54425bf-5bf7-4441-a975-daffe5ce238c",
     "createdTimestamp" : 1697539000367,
     "username" : "userwithnogroupnoentity",
