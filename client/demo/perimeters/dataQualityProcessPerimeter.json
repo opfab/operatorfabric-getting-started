@@ -1,0 +1,10 @@
+{
+	"id" : "dataQualityProcessPerimeter",
+	"process" : "dataQualityProcessId",
+	"stateRights" : [
+	  {
+		"state" : "dataQualityState",
+		"right" : "ReceiveAndWrite"
+	  }
+	]
+  }

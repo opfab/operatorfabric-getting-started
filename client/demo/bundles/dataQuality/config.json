@@ -1,0 +1,21 @@
+{
+    "id": "dataQualityProcessId",
+    "name": "Data quality",
+    "version": "1",
+    "uiVisibility": {
+        "monitoring": true,
+        "processMonitoring": true,
+        "logging": true,
+        "calendar": true
+    },
+    "states": {
+        "dataQualityState": {
+            "name": "Data quality",
+            "description": "Data quality state",
+            "color": "#DA00DA",
+            "templateName": "dataQuality",
+            "styles": ["style"],
+            "acknowledgmentAllowed": "Always"
+        }
+    }
+}
