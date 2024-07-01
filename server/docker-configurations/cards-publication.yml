@@ -1,42 +1,6 @@
 
-spring:
-  deserializer:
-    value:
-      delegate:
-        class: io.confluent.kafka.serializers.KafkaAvroDeserializer
-#        class: org.lfenergy.operatorfabric.cards.publication.kafka.consumer.KafkaAvroWithoutRegistryDeserializer
-  serializer:
-    value:
-      delegate:
-        class: io.confluent.kafka.serializers.KafkaAvroSerializer
-#        class: org.lfenergy.operatorfabric.cards.publication.kafka.producer.KafkaAvroWithoutRegistrySerializer
-# uncomment kafka.consumer.group-id to enable Kafka
-#  kafka:
-#    consumer:
-#      group-id: opfab-command
-
-
-#here we put urls for all feign clients
-users:
-  ribbon:
-    listOfServers: users:2103
-
-externalRecipients-url: "{\
-          externalRecipient: \"http://ext-app:8090/test\" \
-          }"
-
-# WARNING : If you set this parameter to false , all users have the rights to respond to all cards
-checkPerimeterForResponseCard: true
+# Demo configuration, should be removed in production
 operatorfabric:
   cards-publication:
     checkAuthenticationForCardSending: false
     checkPerimeterForCardSending: false
-    kafka:
-      topics:
-        card:
-          topicname: opfab
-        response-card:
-          topicname: opfab-response
-      schema:
-        registry:
-          url: http://localhost:8081

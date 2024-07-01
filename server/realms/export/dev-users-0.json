@@ -176,5 +176,28 @@
     "realmRoles" : [ "default-roles-dev" ],
     "notBefore" : 0,
     "groups" : [ ]
+  },
+  {
+    "id" : "2951ebcb-f804-48b1-9659-opfab",
+    "createdTimestamp" : 1697538125718,
+    "username" : "opfab",
+    "enabled" : true,
+    "totp" : false,
+    "emailVerified" : false,
+    "firstName" : "",
+    "lastName" : "",
+    "credentials" : [ {
+      "id" : "56211d65-789b-4f75-aa78-44d250opfab",
+      "type" : "password",
+      "userLabel" : "My password",
+      "createdDate" : 1697538135699,
+      "secretData" : "{\"value\":\"n9CDOwKI1B/zyrRAJbDShHdh6Iqk0AFg2pML7nwzdHk=\",\"salt\":\"s0mmPxfQh8PICyE6g17q+A==\",\"additionalParameters\":{}}",
+      "credentialData" : "{\"hashIterations\":27500,\"algorithm\":\"pbkdf2-sha256\",\"additionalParameters\":{}}"
+    } ],
+    "disableableCredentialTypes" : [ ],
+    "requiredActions" : [ ],
+    "realmRoles" : [ "default-roles-dev" ],
+    "notBefore" : 0,
+    "groups" : [ ]
   }]
 }

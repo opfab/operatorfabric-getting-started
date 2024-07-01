@@ -39,6 +39,8 @@ operatorfabric.users.default:
       entities: ["ENTITY2_NL"]
     - login: publisher_test
       groups: ["Dispatcher", "ReadOnly", "Manager", "Demo"]
+    - login: opfab
+      groups: ["ADMIN"]
   groups:
     - id: ADMIN
       name: ADMINISTRATORS

@@ -27,4 +27,5 @@ waitService businessconfig localhost:2100
 waitService cards-publication localhost:2102/cards/userCard
 waitService users localhost:2103
 waitService cards-consultation localhost:2104
+waitService cards-reminder localhost:2107
 waitService keycloak localhost:89
