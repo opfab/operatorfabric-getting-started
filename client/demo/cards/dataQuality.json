@@ -11,10 +11,10 @@
 	"startDate": ${current_date_in_milliseconds_from_epoch_plus_2hours},
 	"endDate": ${current_date_in_milliseconds_from_epoch_plus_8hours},
 	"summary": {
-		"key": "message.summary"
+		"key": "quality.summary"
 	},
 	"title": {
-		"key": "chartDetail.title"
+		"key": "quality.title"
 	},
 	"data": {
 		"quality": [
