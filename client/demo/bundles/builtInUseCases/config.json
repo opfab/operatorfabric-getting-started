@@ -1,6 +1,6 @@
 {
     "id": "demoProcessId",
-    "name": "builtInUseCases",
+    "name": "Basic cards",
     "version": "1",
     "uiVisibility": {
         "monitoring": true,
