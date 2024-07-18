@@ -1,0 +1,10 @@
+{
+	"id" : "hVNetworkOperatorPerimeter",
+	"process" : "hVNetworkOperator",
+	"stateRights" : [
+	  {
+		"state" : "criticalSituation",
+		"right" : "ReceiveAndWrite"
+	  }
+	]
+  }

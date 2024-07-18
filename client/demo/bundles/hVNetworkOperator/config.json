@@ -1,0 +1,31 @@
+{
+    "id": "hVNetworkOperator",
+    "name": "HV Network Operator",
+    "version": "1",
+    "uiVisibility": {
+        "monitoring": true,
+        "processMonitoring": true,
+        "logging": true,
+        "calendar": true
+    },
+    "states": {
+        "criticalSituation": {
+            "name": "Criticial Situation",
+            "description": "Critical situation",
+            "color": "#CC9900",
+            "userCard": {
+                "template": "usercard_criticalSituation",
+                "startDateVisible": false,
+                "endDateVisible": false,
+                "severityVisible": false,
+                "recipientForInformationVisible": false
+            },
+            "templateName": "criticalSituation",
+            "styles": [],
+            "acknowledgmentAllowed": "Always",
+            "showAcknowledgmentFooter": "OnlyForEmittingEntity",
+            "type": "INPROGRESS",
+            "consideredAcknowledgedForUserWhen": "AllEntitiesOfUserHaveAcknowledged"
+        }
+    }
+}
