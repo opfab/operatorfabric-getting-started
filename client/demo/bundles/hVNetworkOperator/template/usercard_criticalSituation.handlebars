@@ -1,0 +1,91 @@
+<!-- Copyright (c) 2024, RTE (http://www.rte-france.com)              -->
+<!-- See AUTHORS.txt                                                       -->
+<!-- This Source Code Form is subject to the terms of the Mozilla Public   -->
+<!-- License, v. 2.0. If a copy of the MPL was not distributed with this   -->
+<!-- file, You can obtain one at http://mozilla.org/MPL/2.0/.              -->
+<!-- SPDX-License-Identifier: MPL-2.0                                      -->
+<!-- This file is part of the OperatorFabric project.                      -->
+
+
+<div>
+    <h4 style="text-align:center;color:red"> Critical situation for the safety of the electricity network </h4>
+    <br />
+
+    <div id="user_reason">
+        <center>
+            <div class="opfab-multiselect" style="width:30%">
+                <label> REASON </label>
+                <div id="user_select_reason"></div>
+            </div>
+        </center>
+        <br />
+        <br />
+    </div>
+            <div class="opfab-textarea">
+            <label> OPTIONAL MESSAGE  </label>
+            <textarea id="user_input_message" name="user_input_message"
+                style="width:100%">{{card.data.message}}</textarea>
+    </div>
+</div>
+
+
+<script>
+
+
+    userCardTemplate = {
+        reasonSelect: null,
+
+        init: function () {
+            let reason = {{json card.data.reason}};
+            this.reasonSelect = opfab.multiSelect.init({
+                id: "user_select_reason",
+                options: [
+                    {label: 'Insufficient margin', value: 'Insufficient margin'},
+                    {label: 'Low voltage', value: 'Low voltage'},
+                    {label: 'Important transit', value: 'Important transit'},
+                ],
+                multiple: false,
+                search: true
+            });
+            if (!reason) {
+                reason = "Insufficient margin";
+                this.reasonSelect.setSelectedValues([reason]);
+            }
+            else {
+                this.reasonSelect.setSelectedValues([reason]);
+                document.querySelector('#user_select_reason').disable();
+            }
+        },
+  }
+
+    opfab.currentUserCard.listenToEntityUsedForSendingCard((entity) => {
+        userCardTemplate.init();
+        opfab.currentUserCard.setInitialSelectedRecipients([
+            "ENTITY1_FR","ENTITY2_FR","ENTITY1_IT","ENTITY2_IT","ENTITY1_NL","ENTITY2_NL"
+        ]);
+
+    });
+
+    opfab.currentUserCard.registerFunctionToGetSpecificCardInformation(() => {
+        const message = document.getElementById('user_input_message').value;
+        const reason = document.getElementById('user_select_reason').value;
+ 
+        const card = {
+            summary: {key: "criticalSituation.summary"},
+            title: {key: "criticalSituation.title"},
+            severity: "ALARM",
+            data: {
+                message,
+                reason
+            }
+        };
+
+        return {
+            valid: true,
+            card: card,
+            viewCardInAgenda: false
+        };
+
+    });
+
+</script>

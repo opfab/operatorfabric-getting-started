@@ -19,3 +19,4 @@ done
 
  ./addPerimeterToGroup.sh demoProcessPerimeter Demo $1
  ./addPerimeterToGroup.sh dataQualityProcessPerimeter Demo $1
+ ./addPerimeterToGroup.sh hVNetworkOperatorPerimeter Demo $1

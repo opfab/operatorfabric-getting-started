@@ -1,0 +1,38 @@
+<!-- Copyright (c) 2024, RTE (http://www.rte-france.com)              -->
+<!-- See AUTHORS.txt                                                       -->
+<!-- This Source Code Form is subject to the terms of the Mozilla Public   -->
+<!-- License, v. 2.0. If a copy of the MPL was not distributed with this   -->
+<!-- file, You can obtain one at http://mozilla.org/MPL/2.0/.              -->
+<!-- SPDX-License-Identifier: MPL-2.0                                      -->
+<!-- This file is part of the OperatorFabric project.                      -->
+
+
+<center>
+ <h3 style="color:red"> Critical situation for the safety of the electricity network .</h3>
+
+<br/>
+<br/>
+    <div>
+        <h4 style="color:red"> Reason :{{card.data.reason}} </h4> 
+    </div>
+
+
+<br/>
+<br/>
+<h4> Stop interventions and/or trials significantly impacting the operation of communication tools </h4>
+
+<br/>
+<h4> Stop interventions and/or trials presenting a risk of loss of observability and/or maneuverability of the electrical network structures </h4>
+
+</center>
+
+{{#if card.data.message}}
+    <center>
+        <br/>
+        <div  style="display:flex; justify-content: center">
+            <h4> <div style="text-decoration:underline;min-width:320px"> Optional message : </div> </h4>
+            <h4> <div style="text-align:justify;margin-left:20px">{{keepSpacesAndEndOfLine card.data.message}} </div> </h4>
+        </div>
+    </center>
+    <br/>
+{{/if}}
