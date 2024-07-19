@@ -27,4 +27,5 @@ fi
 	./loadRealTimeScreens.sh realTimeScreens.json $url
 	cd ../businessData
 	./loadBusinessData.sh message-and-question-list $url
+	./loadBusinessData.sh hv-messages-and-questions $url
 )

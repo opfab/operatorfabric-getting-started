@@ -26,6 +26,25 @@
             "showAcknowledgmentFooter": "OnlyForEmittingEntity",
             "type": "INPROGRESS",
             "consideredAcknowledgedForUserWhen": "AllEntitiesOfUserHaveAcknowledged"
+        },
+        "messagesAndQuestions": {
+            "name": "Messages and questions",
+            "description": "Messages and questions",
+            "userCard": {
+                "template": "usercard_messages_and_questions",
+                "startDateVisible": false,
+                "endDateVisible": false,
+                "recipientForInformationVisible" : true,
+                "severityVisible": false
+            },
+            "response": {
+                "state": "messagesAndQuestions",
+                "emittingEntityAllowedToRespond": "false"
+            },
+            "templateName": "messages_and_questions",
+            "styles": [],
+            "type": "INPROGRESS",
+            "consideredAcknowledgedForUserWhen": "AllEntitiesOfUserHaveAcknowledged"
         }
     }
 }

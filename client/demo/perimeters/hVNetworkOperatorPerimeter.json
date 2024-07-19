@@ -5,6 +5,10 @@
 	  {
 		"state" : "criticalSituation",
 		"right" : "ReceiveAndWrite"
+	  },
+	  {
+		"state" : "messagesAndQuestions",
+		"right" : "ReceiveAndWrite"
 	  }
 	]
   }
