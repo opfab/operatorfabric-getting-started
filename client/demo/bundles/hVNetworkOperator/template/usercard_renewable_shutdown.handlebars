@@ -1,0 +1,124 @@
+<!-- Copyright (c) 2024, RTE (http://www.rte-france.com)              -->
+<!-- See AUTHORS.txt                                                       -->
+<!-- This Source Code Form is subject to the terms of the Mozilla Public   -->
+<!-- License, v. 2.0. If a copy of the MPL was not distributed with this   -->
+<!-- file, You can obtain one at http://mozilla.org/MPL/2.0/.              -->
+<!-- SPDX-License-Identifier: MPL-2.0                                      -->
+<!-- This file is part of the OperatorFabric project.                      -->
+
+
+<div>
+    <br/>
+    <h4 style="text-align:center;color:red"> Large-Scale Renewable Energy Production Shutdown  </h4>
+    <br />
+
+    <div id="user_reason">
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="opfab-input" style="flex: 1; margin-right: 10px;">
+                <label> MW SHUTDOWN LOW ESTIMATION : </label>
+                <input type="number" id="user_input_mw_min" value="{{card.data.mw_min}}" style="width: 100%;"/>
+            </div>
+            
+            <div class="opfab-input" style="flex: 1;">
+                <label> MW SHUTDOWN HIGH ESTIMATION : </label>
+                <input type="number" id="user_input_mw_max" value="{{card.data.mw_max}}" style="width: 100%;"/>
+            </div>
+        </div>
+        
+
+        <br />
+
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <div class="opfab-input" style="flex: 1; margin-right: 10px;">
+                <label> START AT : </label>
+                <input type="datetime-local" id="user_input_start" value="{{card.data.start}}" style="width: 100%;"/>
+            </div>
+            
+            <div class="opfab-input" style="flex: 1;">
+                <label> END AT : </label>
+                <input type="datetime-local" id="user_input_end" value="{{card.data.end}}" style="width: 100%;"/>
+            </div>
+        </div>
+        
+
+
+        <br />
+        <br />
+    </div>
+            <div class="opfab-textarea">
+            <label> OPTIONAL MESSAGE  </label>
+            <textarea id="user_input_message" name="user_input_message"
+                style="width:100%">{{card.data.message}}</textarea>
+    </div>
+</div>
+
+
+<script>
+
+
+    userCardTemplate = {
+        reasonSelect: null,
+
+        init: function () {
+
+            const edition = {{json card.data}};
+            if (edition != undefined) return;
+                
+            // Calculate the next hour
+            const now = new Date();
+            now.setHours(now.getHours() + 1);
+            now.setMinutes(0, 0, 0); // Set minutes, seconds, and milliseconds to 0
+
+            // Format the date to match the input type="datetime-local" in local time
+            const nextHour = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+
+            // Set the value of the input field
+            document.getElementById('user_input_start').value = nextHour;
+
+            now.setHours(now.getHours() + 1);
+            const nextNextHour = new Date(now.getTime() - now.getTimezoneOffset() * 60000).toISOString().slice(0, 16);
+            document.getElementById('user_input_end').value = nextNextHour;
+        },
+  }
+
+    opfab.currentUserCard.listenToEntityUsedForSendingCard((entity) => {
+        userCardTemplate.init();
+        opfab.currentUserCard.setInitialSelectedRecipients([
+            "ENTITY1_FR","ENTITY2_FR","ENTITY1_IT","ENTITY2_IT","ENTITY1_NL","ENTITY2_NL"
+        ]);
+
+    });
+
+    opfab.currentUserCard.registerFunctionToGetSpecificCardInformation(() => {
+        const message = document.getElementById('user_input_message').value;
+        const mw_min = document.getElementById('user_input_mw_min').value;
+        const mw_max = document.getElementById('user_input_mw_max').value;
+        const start = document.getElementById('user_input_start').value;
+        const end = document.getElementById('user_input_end').value;
+
+        if (mw_min.length < 1) return {valid: false, errorMsg: 'You must provide MW SHUTDOWN LOW ESTIMATION'};
+        if (mw_max.length < 1) return {valid: false, errorMsg: 'You must provide MW SHUTDOWN HIGH ESTIMATION'};
+ 
+        const card = {
+            summary: {key: "renewableShutdown.summary"},
+            title: {key: "renewableShutdown.title"},
+            severity: "ALARM",
+            data: {
+                message,
+                mw_min,
+                mw_max,
+                start,
+                end
+            }
+        };
+
+        return {
+            valid: true,
+            card: card,
+            viewCardInAgenda: false
+        };
+
+    });
+
+</script>
