@@ -6,5 +6,9 @@
 	"message_or_question_list":{
 		"title":"{{messageTitle}}",
 		"summary":"Message received{{summary}}"
-	}
+	},
+  "renewableShutdown": {
+    "title": "Renewable Energy Shutdown ",
+    "summary": " Large-Scale Renewable Energy Production Shutdown "
+  }
 }

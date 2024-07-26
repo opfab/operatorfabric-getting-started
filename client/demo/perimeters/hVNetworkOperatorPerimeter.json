@@ -9,6 +9,10 @@
 	  {
 		"state" : "messagesAndQuestions",
 		"right" : "ReceiveAndWrite"
+	  },
+	  {
+		"state" : "renewableShutdown",
+		"right" : "ReceiveAndWrite"
 	  }
 	]
   }
