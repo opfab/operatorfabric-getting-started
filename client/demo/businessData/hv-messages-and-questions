@@ -51,7 +51,7 @@
     {
       "id": "Maintenance",
       "title": "Urgent maintenance scheduled",
-      "richMessage": {"ops":[{"insert":"Maintenance work for HV line "},{"attributes":{"color":"#e60000"},"insert":"XXX"},{"insert":"  is shedule today between  "},{"attributes":{"color":"#e60000"},"insert":"XX:XX AM/PM"},{"insert":" and "},{"attributes":{"color":"#e60000","bold":true},"insert":"YY:YY: AM/PM"},{"attributes":{"bold":true},"insert":" "},{"attributes":{"header":2},"insert":"\n\n"},{"insert":"\n"}]},
+      "richMessage": {"ops":[{"insert":"Maintenance work for HV line "},{"attributes":{"color":"#e60000"},"insert":"XXX"},{"insert":"  is scheduled today between  "},{"attributes":{"color":"#e60000"},"insert":"XX:XX AM/PM"},{"insert":" and "},{"attributes":{"color":"#e60000","bold":true},"insert":"YY:YY: AM/PM"},{"attributes":{"bold":true},"insert":" "},{"attributes":{"header":2},"insert":"\n\n"},{"insert":"\n"}]},
       "question": false,
       "severity": "ALARM",
       "recipients": [
@@ -68,7 +68,7 @@
       "id": "PowerPlantCut",
       "title": "Power plant cut asked",
       "richMessage": {
-        "ops":[{"insert":"Ask Power plant "},{"attributes":{"color":"#e60000"},"insert":"XXXX"},{"insert":" to stop producing as soon as possible "},{"attributes":{"header":2},"insert":"\n\n"},{"attributes":{"bold":true},"insert":"Urgence network maintenance is needed "},{"attributes":{"header":2},"insert":"\n\n"},{"insert":"Please respond yes as soon as the message has been transmit to the power plant"},{"attributes":{"header":2},"insert":"\n"},{"insert":"\n"}]
+        "ops":[{"insert":"Ask Power plant "},{"attributes":{"color":"#e60000"},"insert":"XXXX"},{"insert":" to stop producing as soon as possible "},{"attributes":{"header":2},"insert":"\n\n"},{"attributes":{"bold":true},"insert":"Urgence network maintenance is needed "},{"attributes":{"header":2},"insert":"\n\n"},{"insert":"Please respond yes as soon as the message has been transmitted to the power plant"},{"attributes":{"header":2},"insert":"\n"},{"insert":"\n"}]
       },
       "question": true,
       "severity": "ACTION"
@@ -76,7 +76,7 @@
     {
       "id": "MaintenanceEnded",
       "title": "Maintenance Ended",
-      "richMessage": {"ops":[{"insert":"Maintenance work for HV line "},{"attributes":{"color":"#e60000"},"insert":"XXX"},{"insert":"  is over, you can resume your activities"},{"attributes":{"header":2},"insert":"\n\n\n"},{"insert":"\n"}]},
+      "richMessage": {"ops":[{"insert":"Maintenance work for HV line "},{"attributes":{"color":"#e60000"},"insert":"XXX"},{"insert":" is over, you can resume your activities"},{"attributes":{"header":2},"insert":"\n\n\n"},{"insert":"\n"}]},
       "severity": "COMPLIANT",
       "question": false,
       "recipients": [
