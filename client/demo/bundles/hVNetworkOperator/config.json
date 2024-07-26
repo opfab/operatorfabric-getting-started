@@ -45,6 +45,24 @@
             "styles": [],
             "type": "INPROGRESS",
             "consideredAcknowledgedForUserWhen": "AllEntitiesOfUserHaveAcknowledged"
+        },
+        "renewableShutdown": {
+            "name": "Renewable Shutdown",
+            "description": "Renewable Shutdown",
+            "userCard": {
+                "template": "usercard_renewable_shutdown",
+                "startDateVisible": false,
+                "endDateVisible": false,
+                "severityVisible": false,
+                "recipientForInformationVisible": false
+            },
+            "templateName": "renewable_shutdown",
+            "styles": [],
+            "acknowledgmentAllowed": "Always",
+            "showAcknowledgmentFooter": "OnlyForEmittingEntity",
+            "type": "INPROGRESS",
+            "consideredAcknowledgedForUserWhen": "AllEntitiesOfUserHaveAcknowledged"
         }
+
     }
 }
