@@ -1,0 +1,10 @@
+{
+	"id" : "networkContingencyPerimeter",
+	"process" : "networkContingencyProcessId",
+	"stateRights" : [
+	  {
+		"state" : "networkContingencyState",
+		"right" : "ReceiveAndWrite"
+	  }
+	]
+  }
