@@ -65,10 +65,10 @@
             "color": "#0070C0",
             "userCard": {
                 "template": "usercard_question",
-                "severityVisible": false,
-                "startDateVisible": true,
-                "endDateVisible": true,
-                "lttdVisible": true
+                "severityVisible": true,
+                "startDateVisible": false,
+                "endDateVisible": false,
+                "lttdVisible": false
             },
             "response": {
                 "state": "questionState",
