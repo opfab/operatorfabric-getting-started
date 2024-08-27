@@ -1,0 +1,21 @@
+{
+    "id": "networkContingencyProcessId",
+    "name": "Network Area",
+    "version": "1",
+    "uiVisibility": {
+        "monitoring": true,
+        "processMonitoring": true,
+        "logging": true,
+        "calendar": true
+    },
+    "states": {
+        "networkContingencyState": {
+            "name": "Network Area",
+            "description": "Network Area state",
+            "color": "#DA00DA",
+            "templateName": "networkContingency",
+            "styles": ["style"],
+            "acknowledgmentAllowed": "Always"
+        }
+    }
+}
