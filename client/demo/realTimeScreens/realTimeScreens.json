@@ -4,7 +4,10 @@
         "screenName": "All Control Centers",
         "screenColumns": [
           {
-            "entitiesGroups": ["ENTITY_FR","ENTITY_IT","ENTITY_NL"]
+            "entitiesGroups": ["ENTITY_FR","ENTITY_SUP"]
+          },
+          {
+            "entitiesGroups": ["ENTITY_IT","ENTITY_NL"]
           }
         ]
       },

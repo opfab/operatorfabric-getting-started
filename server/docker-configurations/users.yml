@@ -95,7 +95,12 @@ operatorfabric.users.default:
    - id: IT_SUPERVISOR_ENTITY
      name: IT SUPERVISION CENTER 
      description: IT SUPERVISION CENTER
+     parents : ["ENTITY_SUP"]
      roles: ["CARD_RECEIVER", "CARD_SENDER", "ACTIVITY_AREA"]
+   - id: ENTITY_SUP
+     name: IT Supervision Centers
+     description: IT Supervision Centers
+     roles: ["ACTIVITY_AREA_GROUP"]
    - id: ENTITY1_IT
      name: Control Center IT North
      description: Control Center IT North
