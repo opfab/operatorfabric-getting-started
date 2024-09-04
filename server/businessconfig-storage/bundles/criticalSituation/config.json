@@ -1,19 +1,22 @@
 {
-	"id": "criticalSituation",
-	"name": "process.name",
-	"version": "1",
+	"id":"criticalSituation",
+	"name": "Critical Situation",
+	"version":"1",
 	"states":{
 		"criticalSituation-begin" : {
+			"name": "Critical Situation - Begin",
 			"templateName" : "criticalSituationTemplate",
 			"styles" : [ "style" ],
 			"acknowledgmentAllowed": "Always"
 		},
 		"criticalSituation-update" : {
+			"name": "Critical Situation - Update",
 			"templateName" : "criticalSituationTemplate",
 			"styles" : [ "style" ],
 			"acknowledgmentAllowed": "Always"
 		},
 		"criticalSituation-end" : {
+			"name": "Critical Situation - End",
 			"templateName" : "endCriticalSituationTemplate",
 			"styles" : [ "style" ],
 			"acknowledgmentAllowed": "Always"
