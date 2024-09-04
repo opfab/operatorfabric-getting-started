@@ -25,7 +25,7 @@
     },
     {
       "opfabCoreMenuId": "calendar",
-      "visible": false
+      "visible": true
     }
   ],
   "topRightMenus": [
