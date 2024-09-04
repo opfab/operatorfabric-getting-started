@@ -18,7 +18,7 @@ operatorfabric.users.default:
       entities: ["ENTITY1_FR"]
     - login: operator2_fr
       groups: ["Planner", "ReadOnly", "REALTIME_USERS", "Demo"]
-      entities: ["ENTITY2_FR"]
+      entities: ["ENTITY1_FR","ENTITY2_FR","ENTITY3_FR","ENTITY4_FR"]
     - login: itsupervisor1
       groups: ["Supervisor", "REALTIME_USERS", "Demo"]
       entities: ["IT_SUPERVISOR_ENTITY"]
