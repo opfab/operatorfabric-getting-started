@@ -76,7 +76,7 @@
             },
             "templateName": "question",
             "styles": [],
-            "acknowledgmentAllowed": "Never",
+            "acknowledgmentAllowed": "Always",
             "type": "INPROGRESS"
         }
     }
