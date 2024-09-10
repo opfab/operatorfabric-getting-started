@@ -61,7 +61,7 @@
     "keycloack": {
       "name": "Keycloak",
       "rank": 2,
-      "version": "23.0.7"
+      "version": "25.0"
     }
   }
 }
