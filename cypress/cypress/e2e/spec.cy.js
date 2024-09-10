@@ -126,7 +126,7 @@ describe('Getting Started Examples', () => {
       opfab.loginWithUser('operator1_fr');
       opfab.openUserCardMenu();
       //Verify that current perimeter does not allow usercard creation
-      cy.get('of-usercard').should('have.text', 'You are not allowed to send card.');
+      cy.get('of-usercard').should('contain', 'You are not allowed to send cards.');
       opfab.closeUserCardMenu();
       script.setupPerimeterForExample('6');
       script.packageBundleForExample('6');
@@ -134,7 +134,7 @@ describe('Getting Started Examples', () => {
       script.deleteBundleArchiveForExample('6');
       cy.reload();
       opfab.openUserCardMenu();
-      cy.get('.opfab-textarea').type('test message');
+      cy.get('#message').type('test message');
       opfab.selectRecipient('ENTITY1_FR');
       cy.get('#opfab-usercard-btn-prepareCard').click();
       cy.get('#opfab-usercard-btn-accept').click();
@@ -148,8 +148,8 @@ describe('Getting Started Examples', () => {
       script.deleteBundleArchiveForExample('6');
       opfab.loginWithUser('operator1_fr');
       opfab.openUserCardMenu();
-      cy.get('.opfab-textarea').eq(0).type('test object');
-      cy.get('.opfab-textarea').eq(1).type('test message');
+      cy.get('#object').type('test object');
+      cy.get('#message').type('test message');
       opfab.selectRecipient('ENTITY1_FR');
       cy.get('#opfab-usercard-btn-prepareCard').click();
       cy.get('#opfab-usercard-btn-accept').click();
@@ -158,7 +158,7 @@ describe('Getting Started Examples', () => {
   })
 
   describe('Example 7', () => {
-    it('Message card using "build-in" templates', () => {
+    it('Message card using "built-in" templates', () => {
       script.packageBundleForExample('7');
       script.sendBundleForExample('7');
       script.deleteAllCards();
@@ -167,25 +167,25 @@ describe('Getting Started Examples', () => {
 
       cy.reload();
       opfab.openUserCardMenu();
-      cy.get('.opfab-textarea').type('test message with build-in template');
+      cy.get('#usercard_message_input').find('div').eq(0).type('test message with built-in template');
       opfab.selectRecipient('ENTITY1_FR');
       cy.get('#opfab-usercard-btn-prepareCard').click();
       cy.get('#opfab-usercard-btn-accept').click();
       opfab.openFirstCard();
 
       opfab.checkOpenedCardBuildInTemplateMessage('You received a message :');
-      opfab.checkOpenedCardBuildInTemplateMessage('test message with build-in template');
+      opfab.checkOpenedCardBuildInTemplateMessage('test message with built-in template');
 
       script.packageUpdatedBundleForExample7();
       script.sendBundleForExample('7');
       cy.reload();
       opfab.checkOpenedCardBuildInTemplateMessage('a new header');
-      opfab.checkOpenedCardBuildInTemplateMessage('test message with build-in template');
+      opfab.checkOpenedCardBuildInTemplateMessage('test message with built-in template');
     })
   })
 
   describe('Example 8', () => {
-    it('Question card using "build-in" templates', () => {
+    it('Question card using "built-in" templates', () => {
       script.packageBundleForExample('8');
       script.sendBundleForExample('8');
       script.setupPerimeterForExample('8');
