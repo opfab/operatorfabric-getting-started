@@ -1,0 +1,53 @@
+<div style="display: flex; align-items: flex-start ;background-color:white;margin:0;padding:0">
+    <span class="opfab-tooltip">
+        <span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 32 32">
+                <g data-name="15-Arrow Down">
+                    <path
+                        d="M25 0H7a7 7 0 0 0-7 7v18a7 7 0 0 0 7 7h18a7 7 0 0 0 7-7V7a7 7 0 0 0-7-7zm5 25a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5h18a5 5 0 0 1 5 5z"
+                        fill="blue" />
+                    <path d="M23 21.59 8.71 7.29 7.29 8.71 21.59 23H14v2h10a1 1 0 0 0 1-1V14h-2z" fill="blue" />
+                </g>
+            </svg>
+        </span>
+        <div class="opfab-tooltip-content">
+            <div style="font-size:25px;width:500px;">
+                <br />
+                <br />
+                <div class="opfab-table">
+                    <table>
+                        <tr>
+                            <td> <b> Consommation totale </b> </td>
+                            <td> {{card.data.kpis.total_consumption}} </td>
+                        </tr>
+                        <tr>
+                            <td> <b> Charge maximum </b> </td>
+                            <td> {{card.data.kpis.max_overload}} </td>
+                        <tr>
+                            <td> <b> Energie renouvelable </b> </td>
+                            <td> {{card.data.kpis.renewable_energy_share}} </td>
+                        </tr>
+                        <tr>
+                            <td> <b> Volume de redispatching </b> </td>
+                            <td> {{card.data.kpis.redispatching_volume}} </td>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </span>
+    <img id="resultImage" alt="Result Image" style="width: 90%; height: 90%;" />
+</div>
+
+<script>
+
+    fetch('{{card.data.figure_url}}')
+        .then(response => response.text())
+        .then(data => {
+            const base64Image = data.replace(/"/g, ''); // Remove double quotes if present
+            document.getElementById('resultImage').src = `data:image/png;base64,${base64Image}`;
+        })
+        .catch(error => {
+            console.error('Error fetching data:', error);
+        });
+
+</script>

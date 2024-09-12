@@ -1,0 +1,10 @@
+{
+	"id" : "cabPerimeter",
+	"process" : "cabProcessId",
+	"stateRights" : [
+	  {
+		"state" : "STATE_ONE",
+		"right" : "ReceiveAndWrite"
+	  }
+	]
+  }

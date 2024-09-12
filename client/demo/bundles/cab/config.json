@@ -1,0 +1,20 @@
+{
+    "id": "cabProcessId",
+    "name": "CAB Process",
+    "version": "1",
+    "uiVisibility": {
+        "monitoring": true,
+        "processMonitoring": true,
+        "logging": true,
+        "calendar": true
+    },
+    "states": {
+        "STATE_ONE": {
+            "name": "CAB",
+            "description": "CAB",
+            "color": "#DA00DA",
+            "templateName": "cab",
+            "acknowledgmentAllowed": "Always"
+        }
+    }
+}

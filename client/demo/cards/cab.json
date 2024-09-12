@@ -1,0 +1,38 @@
+{
+	"summary": {
+		"key": "cab.summary",
+		"parameters" : {"summary": "Lignes impactées 44_48_133, charge max 132.6%"}
+	},
+	"title": {
+		"key": "cab.title",
+		"parameters" : {"title": "Risque sur aléa N-1 sur la ligne 44_45_126"}
+	},
+	"startDate": ${current_date_in_milliseconds_from_epoch_plus_8hours},
+	"endDate": ${current_date_in_milliseconds_from_epoch_plus_12hours},
+	"groupRecipients": [
+		"Dispatcher"
+	],
+	"severity": "ACTION",
+	"publisher": "publisher_test",
+	"process": "cabProcessId",
+	"processVersion": "1",
+	"processInstanceId": "1726133096958",
+	"state": "STATE_ONE",
+	"data": {
+	  "figure_url": "cabdata/api/v1/observation/743/topology",
+	  "criticality": "MEDIUM",
+	  "event-type": "anticipation",
+	  "line": "44_45_126",
+	  "flux": 132.6,
+	  "use_case": "RTE",
+	  "kpis": {
+		"max_overload": "",
+		"renewable_energy_share": 0.508,
+		"total_consumption": 1177.62,
+		"distance_from_reference_topology": 0,
+		"curtailment_volume": 0,
+		"redispatching_volume": 0
+	  }
+	}
+  }
+  
