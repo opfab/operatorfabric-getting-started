@@ -1,0 +1,43 @@
+= Grafana dashboard demo
+
+=== Start Opfab 
+----
+cd server
+
+./startServer.sh
+----
+
+=== Start Prometheus and Grafana 
+----
+cd monitoring
+
+docker compose up -d
+----
+
+=== Show dashboard in Grafana
+
+Open Grafana console: http://localhost:3000
+
+Login as admin/admin
+
+From left menu select "Dashboard" -> "Opfab" -> "Opfab dashboard"
+
+
+== Dashboard as Opfab custom menu 
+
+Login into opfab as operator1_fr
+
+Select "Grafana" menu
+
+== Dashboard embedded in card 
+
+----
+cd monitoring
+
+./loadMonitoringConfig.sh
+
+./sendCard.sh dashboardCard.json
+
+./sendCard.sh panelCard.json
+
+----

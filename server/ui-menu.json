@@ -16,6 +16,17 @@
           "linkType": "BOTH"
         }
       ]
+    },
+    {
+      "id": "menu2",
+      "entries": [
+        {
+          "customMenuId": "uid_test_1",
+          "url": "/grafana.html",
+          "label": "menu2.entry.single",
+          "linkType": "BOTH"
+        }
+      ]
     }
   ],
   "topRightIconMenus": [
@@ -71,6 +82,11 @@
           "entry": {
             "single": "Documentation"
           }
+        },
+        "menu2": {
+          "entry": {
+            "single": "Grafana"
+          }
         }
       }
     },
@@ -80,6 +96,11 @@
         "menu1": {
           "entry": {
             "single": "Documentation"
+          }
+        },
+        "menu2": {
+          "entry": {
+            "single": "Grafana"
           }
         }
       }
