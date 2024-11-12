@@ -1,0 +1,22 @@
+{
+  "groups": [
+    {
+      "id": "service1",
+      "name": "Base Examples",
+      "processes": [
+        "defaultProcess",
+        "gridCooperation"
+      ]
+    },
+    {
+      "id": "service2",
+      "name": "User card examples",
+      "processes": [
+        "conferenceAndITIncidentExample",
+        "messageOrQuestionExample",
+        "taskExample",
+        "taskAdvancedExample"
+      ]
+    }
+  ]
+}
