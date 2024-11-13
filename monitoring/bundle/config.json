@@ -1,0 +1,12 @@
+{
+	"id":"monitoringProcess",
+	"name": "process.name",
+	"version":"2",
+	"states":{
+		"monitoringState" : {
+			"templateName" : "monitoring",
+			"styles" : [ "style" ],
+			"acknowledgmentAllowed": "Always"
+		}
+	}
+}

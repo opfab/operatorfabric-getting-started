@@ -1,0 +1,10 @@
+{
+	"id" : "monitoring-Perimeter",
+	"process" : "monitoringProcess",
+	"stateRights" : [
+		{
+			"state" : "monitoringState",
+			"right" : "Receive"
+		}
+	]
+}

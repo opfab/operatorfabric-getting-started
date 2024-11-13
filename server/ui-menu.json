@@ -16,6 +16,17 @@
           "linkType": "BOTH"
         }
       ]
+    },
+    {
+      "id": "menu2",
+      "entries": [
+        {
+          "customMenuId": "uid_test_1",
+          "url": "http://localhost:3000/d/be3mo0w8g2jnkd/opfab-dashboard?from=now-6h&to=now&timezone=browser&kiosk",
+          "label": "menu2.entry.single",
+          "linkType": "BOTH"
+        }
+      ]
     }
   ],
   "topRightIconMenus": [
@@ -71,6 +82,11 @@
           "entry": {
             "single": "Documentation"
           }
+        },
+        "menu2": {
+          "entry": {
+            "single": "Grafana"
+          }
         }
       }
     },
@@ -80,6 +96,11 @@
         "menu1": {
           "entry": {
             "single": "Documentation"
+          }
+        },
+        "menu2": {
+          "entry": {
+            "single": "Grafana"
           }
         }
       }
