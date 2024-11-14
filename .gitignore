@@ -8,4 +8,5 @@ server/businessconfig-storage/bundles/demoProcessId
 server/businessconfig-storage/bundles/dataQualityProcessId
 server/businessconfig-storage/bundles/hVNetworkOperator
 server/businessconfig-storage/bundles/networkContingencyProcessId
+server/businessconfig-storage/bundles/defaultProcess/2
 server/businessconfig-storage/realtimescreens.json
