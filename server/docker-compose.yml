@@ -105,3 +105,18 @@ services:
     volumes:
       - "./docker-configurations/cards-reminder.yml:/usr/app/config/docker.yml"
       - "./docker-configurations/common.yml:/usr/app/config/common.yml"
+  supervisor:
+    container_name: supervisor
+    image: "lfeoperatorfabric/of-supervisor:4.5.0.RELEASE"
+    depends_on:
+      - cards-publication
+      - users
+    user: ${USER_ID}:${USER_GID}
+    ports:
+      - "2108:2108"
+    environment:
+      - TZ=Europe/Paris
+      - NODE_ENV=base,common,docker
+    volumes:
+      - "./docker-configurations/supervisor.yml:/usr/app/config/docker.yml"
+      - "./docker-configurations/common.yml:/usr/app/config/common.yml"
