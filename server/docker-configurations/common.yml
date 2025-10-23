@@ -1,4 +1,3 @@
-
 operatorfabric:
   security:
     oauth2:
@@ -17,6 +16,4 @@ operatorfabric:
     host: rabbitmq
     port: 5672
     username: guest
-    password: guest
-
-
+    password: for_test_only
